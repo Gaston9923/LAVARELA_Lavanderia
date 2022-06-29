@@ -1,0 +1,150 @@
+.container-login{
+    background-color:#D6EAF8;
+    height: 1000px;
+    margin-top: 115px;
+}
+
+.carousel-item1{
+    width: 100%;
+    height: 500px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  @font-face{
+      font-family: 'MiPropiaFuente';
+      src:url('NEXTART.otf');
+  }
+  
+  .mifuente{
+    font: bold 36px 'MiPropiaFuente';
+    color: #0283FB;
+    font-size: x-large;
+  }
+  
+  
+  @media (max-width: 600px) {
+    .carousel-item1 {
+      height: 280px;
+    }
+  }
+  
+  /*Para alinear los botones y cuadros de busqueda*/
+  .btn-group, .btn-group-vertical{
+      position: absolute !important;
+  }
+  
+  .MiFooter{
+      background-color: #1E3155;
+      width: 100%;
+      left:0px;
+      bottom:0px;
+      
+  }
+  
+  .fondoInicio{
+      background-image:url("img/fondo1.jpg");
+      background-color: #cccccc;
+  }
+  
+  .celeste{
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#206674+0,205a66+44,1f4e57+100 */
+background: rgb(32,102,116); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(32,102,116,1) 0%, rgba(32,90,102,1) 44%, rgba(31,78,87,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(32,102,116,1) 0%,rgba(32,90,102,1) 44%,rgba(31,78,87,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(32,102,116,1) 0%,rgba(32,90,102,1) 44%,rgba(31,78,87,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#206674', endColorstr='#1f4e57',GradientType=0 ); /* IE6-9 */
+
+  }
+  
+    .verdeAqua{
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0c9a87+0,00ceb3+100 */
+background: rgb(12,154,135); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(12,154,135,1) 0%, rgba(0,206,179,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(12,154,135,1) 0%,rgba(0,206,179,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(12,154,135,1) 0%,rgba(0,206,179,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c9a87', endColorstr='#00ceb3',GradientType=1 ); /* IE6-9 */
+  }
+  .letraVerdeAqua{
+      color: #05B9A2;
+  }
+  
+    .theadR{
+    background-color: #007BFF;
+    color: white;
+  }
+      .theadS{
+    background-color: #17A2B8;
+    color: white;
+  }
+        .theadG{
+    background-color:#3669A1;
+    color: white;
+  }
+          .theadC{
+    background-color:#FEC68D;
+    color: white;
+  }
+  
+      .theadD{
+    background-color:#7fb8f4;
+    color: white;
+  }
+  
+      .azul{
+    background-color: #3669A1;
+  }
+      .botoncolor{
+    background-color: #1F5661;
+  }
+  
+        .naranja{
+    background-color: #FEC68D;
+  }
+  
+        .verdeManzana{
+    background-color: #5FDA5B;
+            
+  }
+  
+  .fondo{
+    background-image:url("fondoBurbuja1.jpg");
+    background-repeat: repeat-x;
+    background-size: 1600px;
+    opacity: 1;
+  }
+  
+  .opacidadMedia{
+      opacity: 0.95;
+  }
+  
+  .sombra{
+      text-shadow: 2px 2px 5px black;
+      
+  }
+  .sombraCarousel{
+      text-shadow: 4px 4px 10px black;
+  }
+  
+  .sombraBlanca{
+      text-shadow: 4px 4px 10px white;
+  }
+  
+  .aladerecha{
+      text-align: right;
+  }
+  
+  .alaizquierda{
+      text-align: left;
+  }
+  
+  .borderReport{
+      border-color:  black;
+      border:solid; 
+      border-style: inset;
+      border-radius: 5px;
+  }
+  
+  
