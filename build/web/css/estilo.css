@@ -1,8 +1,67 @@
-.container-login{
-    background-color:#D6EAF8;
-    height: 1000px;
-    margin-top: 115px;
+html, body{
+    position: relative;
+    height: 100%;
+    width: 100%;
 }
+
+.container-background{
+    position: relative;
+    background-color: #61B2FC;
+    padding-top: 10%;
+    height: 100%;
+}
+
+.container-login{
+    position: relative;
+    width: 35%;
+    padding: 15px;
+    background-color: #DFF0FE;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+}
+
+.title-login{
+    display: inline-flex !important;
+    position: relative !important;
+}
+
+.logo-login{
+    width: 160px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.text-login{
+    text-align: center;
+}
+
+.input-login:focus{
+    background-color:black;
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+@media (max-width: 1000px) {
+    .container-login{
+        width: 75%;
+        transition: 0.5s;
+    }
+  }
+  @media (max-width: 600px) {
+    .container-login{
+        width: 92%;
+        transition: 0.5s;
+    }
+    .title-login{
+        transform: scaleX(0.9);
+        transition: 0.5s;
+        text-align: center;
+    }
+  }
+
+
 
 .carousel-item1{
     width: 100%;
