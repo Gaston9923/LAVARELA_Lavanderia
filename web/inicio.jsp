@@ -13,7 +13,7 @@
         <!--BOOTSTRAP CSS-->
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <!--Codigo CSS Propio-->
-        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="css/inicio.css">
         <!--DATATABLE CSS-->
         <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
         <link rel="stylesheet" type="text/css" href="DataTables/DataTables-1.10.21/css/dataTables.bootstrap4.css">  
@@ -21,7 +21,6 @@
         <link rel="stylesheet" type="text/css" href="DataTables/Buttons-1.6.2/css/buttons.jqueryui.min.css">
         <link rel="stylesheet" type="text/css" href="alertifyjs/css/themes/bootstrap.min.css">
         <link rel="icon" href="img/LavarelaLogo100.ico" sizes="16x16">
-        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
     </head>
     <body class="fondo">
