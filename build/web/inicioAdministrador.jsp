@@ -18,7 +18,7 @@
         <link rel="icon" href="img/LavarelaLogo100.ico" sizes="16x16">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
     </head>
-    <body class="">
+    <body>
         <!--Comienza el NAV-->
         <nav class="navbar color-secondary">
             <a class="navbar-brand" href="#">
@@ -28,7 +28,7 @@
             <ul class="btn-user">
                 <div class="dropdown dropleft" style="" >
                 <button class="btn btn-outline-light dropdown-toggle btn-user" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <img src="img/user1.png" alt="80" width="80">
+                  <img src="img/user1.png" alt="65" width="65">
                 </button>
                 <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="#">
@@ -122,24 +122,23 @@
         </main>
             <center>
             <!-- Footer -->
-        <footer class="page-footer font-small cyan darken-3 celeste">
-             <div style="height:18px"></div>
+        <footer class="page-footer footer-lavarela">
               <div class="col-md-12 py-1">
                   <!-- Facebook -->
                   <a href="https://www.facebook.com/lavanderialavarela/" class="fb-ic">
-                    <i  class="fab fa-facebook-f white-text mr-md-5 mr-3 fa-2x"> </i>
+                    <i  class="fab fa-facebook-f mr-md-5 fa-2x icon-footer"> </i>
                   </a>
                   <!--Instagram-->
                   <a href="https://www.instagram.com/lavanderia_lavarela_malagueno/" class="ins-ic">
-                    <i class="fab fa-instagram white-text mr-md-5 mr-3 fa-2x"> </i>
+                    <i class="fab fa-instagram mr-md-5 fa-2x icon-footer"> </i>
                   </a>
                   <!--Instagram-->
                   <a href="https://api.whatsapp.com/send?phone=+54 351 6378321&text=" class="ins-ic">
-                    <i class="fab fa-whatsapp white-text mr-md-5 mr-3 fa-2x"> </i>
+                      <i class="fab fa-whatsapp mr-md-5 fa-2x icon-footer"> </i>
                   </a>
               </div>
           <!-- Copyright -->
-          <div class="footer-copyright letraVerdeAqua text-center mr-md-5 py-2">© 2020 Copyright:
+          <div class="footer-copyright ">© 2020 Copyright:
               <a class="" > ZAPATA GASTÓN-110534</a>
           </div>
           <!-- Copyright -->
@@ -164,6 +163,5 @@
         <script src="DataTables/Buttons-1.6.2/js/buttons.colVis.min.js"></script>
     <!--Codigo JS Propio-->   
         <script type="text/javascript" src="js/main.js"></script> 
-  
     </body>
 </html>
