@@ -76,11 +76,7 @@
       transform: scale(1.15);
       transition: 0.3s;
   }
-  
-  .footer-lavarela{
-      padding-top: 10px;
-      background: rgb(1, 82, 157);
-  }
+
   
   .footer-copyright{
       font-size: 16px;
