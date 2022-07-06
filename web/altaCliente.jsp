@@ -25,25 +25,25 @@
     </head>
     <body class="fondo">
         <!--Comienza el NAV-->
-        <nav class="navbar navbar-light p-1 celeste"  >
+        <nav class="navbar color-secondary">
             <a class="navbar-brand" href="#">
-              <img src="img/LavarelaLogo10.png" width="75" height="70" class="d-inline-block align-middle" alt="">
-              <span class="sombra mifuente">LAVANDERIA LAVARELA</span>
+              <img src="img/LavarelaLogo10.png" class="navbar-logo" alt="">
+              <span class="navbar-title">LAVANDERIA LAVARELA</span>
             </a>
-            <ul>
-                <div class="dropdown align-middle dropleft" style="" >
-                <button class=" btn btn-outline-light dropdown-toggle " style=" border: none" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <img src="img/user1.png" alt="80" width="80">
+            <ul class="btn-user">
+                <div class="dropdown dropleft" style="" >
+                <button class="btn btn-outline-light dropdown-toggle btn-user" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="img/user1.png" alt="65" width="65">
                 </button>
                 <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="#">
-                        Usuario Empleado
+                        Usuario Administrador
                     </a>
                     <a class="dropdown-item" href="#">
                         ${usuario.getNombreUsuario()}
                     </a>
                     <small id="emailHelp" class="form-text text-muted">
-                    
+                    <a href="register.jsp">Registrar un nuevo Empleado!</a> <br>
                 </small>
                   <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="/LAVARELA.110534/index.jsp">Cerrar Sesión</a>
@@ -52,54 +52,54 @@
             </ul>
         </nav>
         <!--Comienza el NAV-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark verdeAqua sombra">
-            <a class="btn btn-outline-light" style="border: none" href="inicio.jsp">Inicio</a>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-menu">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="btn btn-outline-light" style="margin-left: 1px; border: none" href="/LAVARELA.110534/ListarRegistrosServlet">Registros <span class="sr-only"></span></a>
+                        <a class="btn btn-outline-light navbar-menu-btn" href="inicio.jsp">Inicio</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="btn btn-outline-light navbar-menu-btn" href="/LAVARELA.110534/ListarRegistrosServlet">Registros <span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-outline-light" style="margin-left: 1px; border: none" href="/LAVARELA.110534/ListarServiciosServlet">Servicios</a>
+                        <a class="btn btn-outline-light navbar-menu-btn" href="/LAVARELA.110534/ListarServiciosServlet">Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-outline-light" style="margin-left: 1px; border: none" href="/LAVARELA.110534/ListarGastosServlet">Gastos</a>
+                        <a class="btn btn-outline-light navbar-menu-btn" href="/LAVARELA.110534/ListarGastosServlet">Gastos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-outline-light" style="margin-left: 1px; border: none" href="/LAVARELA.110534/ListarClientesServlet">Clientes</a>
+                        <a class="btn btn-outline-light navbar-menu-btn" href="/LAVARELA.110534/ListarClientesServlet">Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-outline-light" style="margin-left: 1px; border: none" href="/LAVARELA.110534/Reportes.jsp">Reportes</a>
+                        <a class="btn btn-outline-light navbar-menu-btn" href="/LAVARELA.110534/Reportes.jsp">Reportes</a>
                     </li>
                 </ul>
             </div>
         </nav>
         <!--Fin de NAV-->
             
-                <div style="height:20px"></div>
-                <div class="container col-sm-4" style="border:double; border-radius: 10px; border-color:#FEC68D; background-color: #FEC68D; opacity: 0.9" >
-                
-                <h1 class="text-center"><span class="badge badge-primary naranja sombra">NUEVO CLIENTE</span></h1>
+                <div class="container-new-client">
+                <h1 class="text-center"><span class="badge title-new">NUEVO CLIENTE</span></h1>
                 <form class="form-horizontal" method="POST" action=" AgregarClienteServlet" accept-charset="UTF-8">
                     <div class="modal-body">
-                        <input type="text" name="txtIdCliente"  value="${idCliente}" hidden="" class="form-control col-md-9"/>
-                        <label><span class="sombra" style="color: black">Nombre:</span></label>
-                        <input type="text" name="txtNombre"  value="${nombre}" placeholder="Ej: Carlos" required="" maxlength="12" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" class="form-control col-md-12"/>
-                        <label><span class="sombra" style="color: black">Apellido:</span></label>
-                        <input type="text" name="txtApellido"  value="${apellido}" placeholder="Ej: Sanchez" maxlength="12" required="" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" class="form-control col-md-12"/>
-                        <label><span class="sombra" style="color: black">Dirección:</span></label>
-                        <input type="text" name="txtDireccion"  value="${direccion}" placeholder="Ej: Av.Pablo Ricchieri 3720" required="18" class="form-control col-md-12"/>
-                        <label><span class="sombra" style="color: black">Barrio:</span></label>
-                        <input type="text" name="txtBarrio"  value="${barrio}" placeholder="Ej: Barrio Jardin" required="18" class="form-control col-md-12"/>
-                        <label><span class="sombra" style="color: black">Telefono:</span></label>
-                        <input type="number" name="txtTelefono"  value="${telefono}" placeholder="Ej: 3513525409" required="" min="0" maxlength="12" class="form-control col-md-12" />
-                        <label><span class="sombra" style="color: black">Notas:</span></label>
-                        <textarea  name="txtNotas" placeholder="Ej: DNI...." class="form-control col-md-12" rows="4" cols="4" maxlength="50"/>${notas}</textarea>
+                        <input class="input-new" type="text" name="txtIdCliente"  value="${idCliente}" hidden=""/>
+                        <label><span class="sombra" style="color: white">Nombre:</span></label>
+                        <input class="input-new" type="text" name="txtNombre"  value="${nombre}" placeholder="Ej: Carlos" required="" maxlength="12" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"/>
+                        <label><span class="sombra" style="color: white">Apellido:</span></label>
+                        <input class="input-new" type="text" name="txtApellido"  value="${apellido}" placeholder="Ej: Sanchez" maxlength="12" required="" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"/>
+                        <label><span class="sombra" style="color: white">Dirección:</span></label>
+                        <input class="input-new" type="text" name="txtDireccion"  value="${direccion}" placeholder="Ej: Av.Pablo Ricchieri 3720" required="18"/>
+                        <label><span class="sombra" style="color: white">Barrio:</span></label>
+                        <input class="input-new" type="text" name="txtBarrio"  value="${barrio}" placeholder="Ej: Barrio Jardin" required="18"/>
+                        <label><span class="sombra" style="color: white">Telefono:</span></label>
+                        <input class="input-new" type="number" name="txtTelefono"  value="${telefono}" placeholder="Ej: 3513525409" required="" min="0" maxlength="12"/>
+                        <label><span class="sombra" style="color: white">Notas:</span></label>
+                        <textarea class="input-new-textarea" name="txtNotas" placeholder="Ej: DNI...." rows="4" cols="4" maxlength="50"/>${notas}</textarea>
                         <br>      
-                        <center><button type="submit" class="btn btn-light sombra">Agregar</button></center>
+                        <center><button type="submit" class="btn btn-add">Agregar</button></center>
                     </div>
                 </form>
                 </div>       
@@ -107,32 +107,25 @@
             
                             
         </body>
-        <div style="height:5px"></div>
         <center>
             <!-- Footer -->
-        <footer class="page-footer font-small cyan darken-3 celeste" >
-          <!-- Footer Elements -->
-            <!-- Grid row-->
-             <div style="height:18px"></div>
-              <!-- Grid column -->
+        <footer class="page-footer footer-lavarela">
               <div class="col-md-12 py-1">
                   <!-- Facebook -->
                   <a href="https://www.facebook.com/lavanderialavarela/" class="fb-ic">
-                    <i  class="fab fa-facebook-f white-text mr-md-5 mr-3 fa-2x"> </i>
+                    <i  class="fab fa-facebook-f mr-md-5 fa-2x icon-footer"> </i>
                   </a>
                   <!--Instagram-->
                   <a href="https://www.instagram.com/lavanderia_lavarela_malagueno/" class="ins-ic">
-                    <i class="fab fa-instagram white-text mr-md-5 mr-3 fa-2x"> </i>
+                    <i class="fab fa-instagram mr-md-5 fa-2x icon-footer"> </i>
                   </a>
                   <!--Instagram-->
                   <a href="https://api.whatsapp.com/send?phone=+54 351 6378321&text=" class="ins-ic">
-                    <i class="fab fa-whatsapp white-text mr-md-5 mr-3 fa-2x"> </i>
+                      <i class="fab fa-whatsapp mr-md-5 fa-2x icon-footer"> </i>
                   </a>
               </div>
-              <!-- Grid column -->
-          <!-- Footer Elements -->
           <!-- Copyright -->
-          <div class="footer-copyright letraVerdeAqua text-center mr-md-5 py-2">© 2020 Copyright:
+          <div class="footer-copyright ">© 2020 Copyright:
               <a class="" > ZAPATA GASTÓN-110534</a>
           </div>
           <!-- Copyright -->

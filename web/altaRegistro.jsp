@@ -26,25 +26,25 @@
     </head>
     <body class="fondo">
         <!--Comienza el NAV-->
-        <nav class="navbar navbar-light p-1 celeste"  >
+        <nav class="navbar color-secondary">
             <a class="navbar-brand" href="#">
-              <img src="img/LavarelaLogo10.png" width="75" height="70" class="d-inline-block align-middle" alt="">
-              <span class="sombra mifuente">LAVANDERIA LAVARELA</span>
+              <img src="img/LavarelaLogo10.png" class="navbar-logo" alt="">
+              <span class="navbar-title">LAVANDERIA LAVARELA</span>
             </a>
-            <ul>
-                <div class="dropdown align-middle dropleft" style="" >
-                <button class=" btn btn-outline-light dropdown-toggle " style=" border: none" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <img src="img/user1.png" alt="80" width="80">
+            <ul class="btn-user">
+                <div class="dropdown dropleft" style="" >
+                <button class="btn btn-outline-light dropdown-toggle btn-user" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="img/user1.png" alt="65" width="65">
                 </button>
                 <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="#">
-                        Usuario Empleado
+                        Usuario Administrador
                     </a>
                     <a class="dropdown-item" href="#">
                         ${usuario.getNombreUsuario()}
                     </a>
                     <small id="emailHelp" class="form-text text-muted">
-                    
+                    <a href="register.jsp">Registrar un nuevo Empleado!</a> <br>
                 </small>
                   <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="/LAVARELA.110534/index.jsp">Cerrar Sesión</a>
@@ -53,88 +53,81 @@
             </ul>
         </nav>
         <!--Comienza el NAV-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark verdeAqua sombra">
-            <a class="btn btn-outline-light" style="border: none" href="inicio.jsp">Inicio</a>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-menu">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="btn btn-outline-light" style="margin-left: 1px; border: none" href="/LAVARELA.110534/ListarRegistrosServlet">Registros <span class="sr-only"></span></a>
+                        <a class="btn btn-outline-light navbar-menu-btn" href="inicio.jsp">Inicio</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="btn btn-outline-light navbar-menu-btn" href="/LAVARELA.110534/ListarRegistrosServlet">Registros <span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-outline-light" style="margin-left: 1px; border: none" href="/LAVARELA.110534/ListarServiciosServlet">Servicios</a>
+                        <a class="btn btn-outline-light navbar-menu-btn" href="/LAVARELA.110534/ListarServiciosServlet">Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-outline-light" style="margin-left: 1px; border: none" href="/LAVARELA.110534/ListarGastosServlet">Gastos</a>
+                        <a class="btn btn-outline-light navbar-menu-btn" href="/LAVARELA.110534/ListarGastosServlet">Gastos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-outline-light" style="margin-left: 1px; border: none" href="/LAVARELA.110534/ListarClientesServlet">Clientes</a>
+                        <a class="btn btn-outline-light navbar-menu-btn" href="/LAVARELA.110534/ListarClientesServlet">Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-outline-light" style="margin-left: 1px; border: none" href="/LAVARELA.110534/Reportes.jsp">Reportes</a>
+                        <a class="btn btn-outline-light navbar-menu-btn" href="/LAVARELA.110534/Reportes.jsp">Reportes</a>
                     </li>
                 </ul>
             </div>
         </nav>
         <!--Fin de NAV-->
         
-            <div style="height:40px"></div>
-            <div class="container col-sm-4" style="border:double; border-radius: 10px;background-color: #007BFF ; border-color:black; opacity: 0.9" >
+            <div class="container-new-register">
                 <center><h2><span class="badge badge-primary sombra">NUEVO REGISTRO</span></h2></center>
-
-                <form id="formAgregarRegistro" class="" method="POST" action="AgregarRegistroServlet" accept-charset="UTF-8">
-                <div class="modal-body">
-                    <input type="text" name="txtIdRegistro" value="${idRegistro}" hidden=""  placeholder="idRegistro" class="form-control col-md-4"/>
+                <form id="formAgregarRegistro" class="modal-body" method="POST" action="AgregarRegistroServlet" accept-charset="UTF-8">
+                    <input type="text" name="txtIdRegistro" value="${idRegistro}" hidden=""  placeholder="idRegistro"/>
                     <input type="text" name="txtIdUsuario" placeholder="Usuario Registrado" hidden="" value="${usuario.getIdUsuario()}">                                                            
                     <label><span style="color: white">Seleccione un Cliente</span></label>
-                        <select class="form-control mb-4" name ="txtIdCliente" placeholder="Cliente"/>
-                            <c:forEach items="${ListadoClientes}" var="x">
-                                <option value="${x.idCliente}" ${idCliente eq x.idCliente?'selected':''}>${x.apellido} ${x.nombre},DNI-${x.notas}</option>
-                            </c:forEach>
-                        </select>
+                    <select class="input-new" name ="txtIdCliente" placeholder="Cliente"/>
+                        <c:forEach items="${ListadoClientes}" var="x">
+                            <option value="${x.idCliente}" ${idCliente eq x.idCliente?'selected':''}>${x.apellido} ${x.nombre},DNI-${x.notas}</option>
+                        </c:forEach>
+                    </select>
                     <label><a style="color: blue" href="AgregarClienteServlet">Cargue un nuevo cliente si este no existe</a></label>
-                    <br>
-                    <input type="number" name="txtCantidadServ" value="${cantidadServ}" hidden=""  min="0" placeholder="CantidadServ" class="form-control mb-4"/> 
+                    <input type="number" name="txtCantidadServ" value="${cantidadServ}" hidden=""  min="0" placeholder="CantidadServ"/> 
                     <label><span style="color: white">Qué desea hacer con el importe?</span></label>
-                        <select class="form-control mb-4" name="cboEstadoPago" placeholder=""/>
-                            <c:forEach items="${ListadoEstadosPagos}" var="x">
-                                <option value="${x.idEstadoPago}" ${idEstadoPago eq x.idEstadoPago?'selected':''}>${x.estadoPago}</option>
-                            </c:forEach>
-                        </select>
-                    <br>
-                    <input type="text" name="txtEstadoServ" value="Incompleto" hidden="" placeholder="Estado" required="" maxlength="14" class="form-control mb-4"/>
-                    <br> 
-                <button type="submit" class="btn btn-light" >Agregar</button>
-                </div>
-            </form>
+                    <select class="input-new" name="cboEstadoPago" placeholder=""/>
+                        <c:forEach items="${ListadoEstadosPagos}" var="x">
+                            <option value="${x.idEstadoPago}" ${idEstadoPago eq x.idEstadoPago?'selected':''}>${x.estadoPago}</option>
+                        </c:forEach>
+                    </select>
+                    <input type="text" name="txtEstadoServ" value="Incompleto" hidden="" placeholder="Estado" required="" maxlength="14"/>
+                    <button type="submit" class="btn btn-add" >Agregar</button>
+                </form>
             </div>        
         
         <center>
-            <div style="height:92px"></div>
-        <!-- Footer -->
-        <footer class=" page-footer font-small cyan darken-3 celeste MiFooter">
-            <div style="height:18px"></div>
-            <div class="col-md-12 py-1">
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/lavanderialavarela/" class="fb-ic">
-                    <i  class="fab fa-facebook-f white-text mr-md-5 mr-3 fa-2x"> </i>
-                </a>
-                <!--Instagram-->
-                <a href="https://www.instagram.com/lavanderia_lavarela_malagueno/" class="ins-ic">
-                    <i class="fab fa-instagram white-text mr-md-5 mr-3 fa-2x"> </i>
-                </a>
-                <!--Instagram-->
-                <a href="https://api.whatsapp.com/send?phone=+54 351 6378321&text=" class="ins-ic">
-                    <i class="fab fa-whatsapp white-text mr-md-5 mr-3 fa-2x"> </i>
-                </a>
-            </div>
-            <!-- Copyright -->
-            <div class="footer-copyright letraVerdeAqua text-center mr-md-5 py-2">© 2020 Copyright:
-                <a class="" > ZAPATA GASTÓN-110534</a>
-            </div>
-            <!-- Copyright -->
+            <!-- Footer -->
+        <footer class="page-footer footer-lavarela">
+              <div class="col-md-12 py-1">
+                  <!-- Facebook -->
+                  <a href="https://www.facebook.com/lavanderialavarela/" class="fb-ic">
+                    <i  class="fab fa-facebook-f mr-md-5 fa-2x icon-footer"> </i>
+                  </a>
+                  <!--Instagram-->
+                  <a href="https://www.instagram.com/lavanderia_lavarela_malagueno/" class="ins-ic">
+                    <i class="fab fa-instagram mr-md-5 fa-2x icon-footer"> </i>
+                  </a>
+                  <!--Instagram-->
+                  <a href="https://api.whatsapp.com/send?phone=+54 351 6378321&text=" class="ins-ic">
+                      <i class="fab fa-whatsapp mr-md-5 fa-2x icon-footer"> </i>
+                  </a>
+              </div>
+          <!-- Copyright -->
+          <div class="footer-copyright ">© 2020 Copyright:
+              <a class="" > ZAPATA GASTÓN-110534</a>
+          </div>
+          <!-- Copyright -->
         </footer>
         <!-- Footer -->
 </center>

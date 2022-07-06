@@ -26,25 +26,25 @@
     </head>
     <body class="fondo">
         <!--Comienza el NAV-->
-        <nav class="navbar navbar-light p-1 celeste"  >
+        <nav class="navbar color-secondary">
             <a class="navbar-brand" href="#">
-              <img src="img/LavarelaLogo10.png" width="75" height="70" class="d-inline-block align-middle" alt="">
-              <span class="sombra mifuente">LAVANDERIA LAVARELA</span>
+              <img src="img/LavarelaLogo10.png" class="navbar-logo" alt="">
+              <span class="navbar-title">LAVANDERIA LAVARELA</span>
             </a>
-            <ul>
-                <div class="dropdown align-middle dropleft" style="" >
-                <button class=" btn btn-outline-light dropdown-toggle " style=" border: none" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <img src="img/user1.png" alt="80" width="80">
+            <ul class="btn-user">
+                <div class="dropdown dropleft" style="" >
+                <button class="btn btn-outline-light dropdown-toggle btn-user" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="img/user1.png" alt="65" width="65">
                 </button>
                 <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="#">
-                        Usuario Empleado
+                        Usuario Administrador
                     </a>
                     <a class="dropdown-item" href="#">
                         ${usuario.getNombreUsuario()}
                     </a>
                     <small id="emailHelp" class="form-text text-muted">
-                    
+                    <a href="register.jsp">Registrar un nuevo Empleado!</a> <br>
                 </small>
                   <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="/LAVARELA.110534/index.jsp">Cerrar Sesión</a>
@@ -53,79 +53,75 @@
             </ul>
         </nav>
         <!--Comienza el NAV-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark verdeAqua sombra">
-            <a class="btn btn-outline-light" style="border: none" href="inicio.jsp">Inicio</a>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-menu">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="btn btn-outline-light" style="margin-left: 1px; border: none" href="/LAVARELA.110534/ListarRegistrosServlet">Registros <span class="sr-only"></span></a>
+                        <a class="btn btn-outline-light navbar-menu-btn" href="inicio.jsp">Inicio</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="btn btn-outline-light navbar-menu-btn" href="/LAVARELA.110534/ListarRegistrosServlet">Registros <span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-outline-light" style="margin-left: 1px; border: none" href="/LAVARELA.110534/ListarServiciosServlet">Servicios</a>
+                        <a class="btn btn-outline-light navbar-menu-btn" href="/LAVARELA.110534/ListarServiciosServlet">Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-outline-light" style="margin-left: 1px; border: none" href="/LAVARELA.110534/ListarGastosServlet">Gastos</a>
+                        <a class="btn btn-outline-light navbar-menu-btn" href="/LAVARELA.110534/ListarGastosServlet">Gastos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-outline-light" style="margin-left: 1px; border: none" href="/LAVARELA.110534/ListarClientesServlet">Clientes</a>
+                        <a class="btn btn-outline-light navbar-menu-btn" href="/LAVARELA.110534/ListarClientesServlet">Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-outline-light" style="margin-left: 1px; border: none" href="/LAVARELA.110534/Reportes.jsp">Reportes</a>
+                        <a class="btn btn-outline-light navbar-menu-btn" href="/LAVARELA.110534/Reportes.jsp">Reportes</a>
                     </li>
                 </ul>
             </div>
         </nav>
         <!--Fin de NAV-->
             
-            <div style="height:30px"></div>
-            <div class="container col-sm-4" style="border:double; border-radius: 10px; border-color:#3669A1; background-color: #3669A1; opacity: 0.9" >
-                <center><h1><span class="badge badge-primary azul sombra" >NUEVO GASTO</span></h1></center>
-            
-        <br>
-                <form class="form-horizontal"  method="POST" action="/LAVARELA.110534/AgregarGastoServlet">
-                    <input type="text" name="txtIdGasto" hidden="" value="${idGasto}" placeholder="Descripción" class="form-control col-md-12"/>
+            <div class="container-new-costs" >
+                <h1><span class="badge title-new" >NUEVO GASTO</span></h1>         
+                <form class="modal-body" method="POST" action="/LAVARELA.110534/AgregarGastoServlet">
+                    <input class="input-new" type="text" name="txtIdGasto" hidden="" value="${idGasto}" placeholder="Descripción"/>
                     <label><span style="color: white">Ingrese el nombre del gasto</span></label>
-                    <input type="text" name="txtDescripcion" value="${descripcion}" placeholder="Descripción"  required="" class="form-control col-md-12"/>
+                    <input class="input-new" type="text" name="txtDescripcion" value="${descripcion}" placeholder="Descripción"  required=""/>
                     <br>
                     <label><span style="color: white">Ingrese el importe</span></label>
-                    <input type="number" name="txtImporte" value="${importe}" placeholder="Importe" required="" min="0" max="99999" step="any" class="form-control col-md-12"/>
+                    <input class="input-new" type="number" name="txtImporte" value="${importe}" placeholder="Importe" required="" min="0" max="99999" step="any"/>
                     <br>
                     <label><span style="color: white">Cómo se pago?</span></label>
-                    <select class="form-control col-md-12" name ="idFormaPago" placeholder="idFormaPago" />
-                    <c:forEach items="${Listado}" var="x">
-                        <option value="${x.idFormaPago}">${x.formaPago}</option>
-                    </c:forEach>
+                    <select class="input-new" name ="idFormaPago" placeholder="idFormaPago" />
+                        <c:forEach items="${Listado}" var="x">
+                            <option value="${x.idFormaPago}">${x.formaPago}</option>
+                        </c:forEach>
                     </select>   
                     <br>
-                    <center><button type="submit" class="btn btn-light">Agregar</button></center>
+                    <center><button type="submit" class="btn btn-add">Agregar</button></center>
                 </form>
-                    <br>
-    
-        </div>
-                    <div style="height:63px"></div>
+            </div>
+                    
         <center>
             <!-- Footer -->
-        <footer class="page-footer font-small cyan darken-3 celeste MiFooter">
-             <div style="height:18px"></div>
+        <footer class="page-footer footer-lavarela">
               <div class="col-md-12 py-1">
                   <!-- Facebook -->
                   <a href="https://www.facebook.com/lavanderialavarela/" class="fb-ic">
-                    <i  class="fab fa-facebook-f white-text mr-md-5 mr-3 fa-2x"> </i>
+                    <i  class="fab fa-facebook-f mr-md-5 fa-2x icon-footer"> </i>
                   </a>
                   <!--Instagram-->
                   <a href="https://www.instagram.com/lavanderia_lavarela_malagueno/" class="ins-ic">
-                    <i class="fab fa-instagram white-text mr-md-5 mr-3 fa-2x"> </i>
+                    <i class="fab fa-instagram mr-md-5 fa-2x icon-footer"> </i>
                   </a>
                   <!--Instagram-->
                   <a href="https://api.whatsapp.com/send?phone=+54 351 6378321&text=" class="ins-ic">
-                    <i class="fab fa-whatsapp white-text mr-md-5 mr-3 fa-2x"> </i>
+                      <i class="fab fa-whatsapp mr-md-5 fa-2x icon-footer"> </i>
                   </a>
               </div>
           <!-- Copyright -->
-          <div class="footer-copyright letraVerdeAqua text-center mr-md-5 py-2">© 2020 Copyright:
+          <div class="footer-copyright ">© 2020 Copyright:
               <a class="" > ZAPATA GASTÓN-110534</a>
           </div>
           <!-- Copyright -->
